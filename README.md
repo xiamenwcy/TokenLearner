@@ -29,7 +29,6 @@ You can also use `TokenLearnerModuleV11`, which aligns with the [official implem
 
 ```python
 import torch
-import torch.nn as nn
 from tokenlearner import TokenLearnerModuleV11
 
 tklr_v11 = TokenLearnerModuleV11(in_channels=128, num_tokens=8, num_groups=4, dropout_rate=0.)
