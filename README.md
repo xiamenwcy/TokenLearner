@@ -20,7 +20,7 @@ from tokenlearner import TokenLearner
 
 tklr = TokenLearner(in_channels=128, num_tokens=8, use_sum_pooling=False)
 
-x = torch.ones(256, 32, 32, 128)
+x = torch.ones(256, 32, 32, 128)  # [bs, h, w, c]
 y1 = tklr(x)
 print(y1.shape)  # [256, 8, 128]
 ```
@@ -35,7 +35,7 @@ from tokenlearner import TokenLearnerModuleV11
 tklr_v11 = TokenLearnerModuleV11(in_channels=128, num_tokens=8, num_groups=4, dropout_rate=0.)
 
 tklr_v11.eval()  # control droput
-x = torch.ones(256, 32, 32, 128)
+x = torch.ones(256, 32, 32, 128)   # [bs, h, w, c]
 y2 = tklr_v11(x)
 print(y2.shape)  # [256, 8, 128]
 ```
